@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    
+    .titulo{
+        background-color: #9b999c;
+        color: #fff;
+        padding: 0.5em;
+        font-size: 20px;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+        
+        height: 100vh;
+        
+        
+    }
+    img{
+        width: 80px;
+        filter: drop-shadow(0rem 0rem 0.4rem #000);
+    }
+    nav{
+        background-image: linear-gradient(60deg, #ffb4e0, #004780);
+
+        padding: 3em;
+        border: 2px solid black;
+        border-radius: 25px 10px ;
+
+        gap: 1em;
+    }
+    p{
+        color: #fff;
+        font-size: 16px;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(41, 15, 156);
+    }
+
+}

@@ -1,0 +1,73 @@
+.signo-principal{
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+
+            background-image: linear-gradient(rgb(0, 255, 234), rgb(175, 7, 241));
+
+            border-bottom: 1px solid rgb(70, 70, 70);
+
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+
+            img{
+                width: 10em;
+            }
+            h1{
+                font-family: 'Franklin Gothic Heavy';
+            }
+            p{
+                font-size: 18px;
+                font-family: 'Franklin Gothic Heavy';
+            }
+        }
+
+        .secao-principal{
+            min-height: 100vh;
+            padding: 3em 0em;
+            background-color: rgb(69, 165, 141);
+            
+            .alinhamento-div{
+                background-color: rgb(248, 218, 255);
+                width: 30%;
+                height: 25em;
+                padding: 2em;
+    
+                border-radius: 25px;
+    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                div{
+                    margin-top: 3em;
+                    align-items: flex-start;
+                }
+                input{
+                    width: 15em;
+                    min-height: 2.5em;
+
+                    border-radius: 25px;
+                    border: none;
+                    outline: none;
+                    padding-left: 15px;
+                }
+                label{
+                    margin-left: 10px;
+                }
+                h2{
+                    align-self: center;
+                    margin-top: 2em;
+                }
+            }
+        }
+        
+        
+        
+}
