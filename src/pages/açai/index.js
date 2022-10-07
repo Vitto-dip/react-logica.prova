@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './index.scss'
-
+import { calculo } from '../../services';
 
 export default function Acai() {
     const [pequeno, setPequeno] = useState(0);
@@ -9,25 +9,15 @@ export default function Acai() {
     const [desconto, setDesconto] = useState(0);
     const [total, setTotal] = useState(0);
 
-
-    function calculo() {
-
-        let resultado = (pequeno * 13.50) + (medio * 15) + (grande * 17.50);
-        let reducao = (resultado * desconto) / 100;
-        let valor = resultado - reducao;
-        let msg = `Total à pagar é R$${valor}`;
-        if (desconto < 0 || desconto > 100) {
-            msg = "Valor de desconto inválido!"
-        }
-        else if (pequeno < 0 || medio < 0 || grande < 0) {
-            msg = "Quantidade de produto inválido!"
-        }
-        setTotal(msg)
-
+    function CalculoTotal(){
+        let x = calculo(pequeno, medio, grande, desconto)
+        setTotal(x)
     }
+    
 
     useEffect(() => {
-        calculo()
+        CalculoTotal()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pequeno, medio, grande, desconto])
 
     return (

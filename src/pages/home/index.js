@@ -12,13 +12,13 @@ export default function Home() {
                 <img src="/assets/images/bdac4158fd47a911ad7fd704bb5774ff.png" alt="" />
                 
                 <nav>
-                    <p>Serviço de Açai:</p>
+                    <p className="p-home">Serviço de Açai:</p>
                     <Link to="/acai" > Açai </Link>
                 
-                    <p>Serviço de Signo:</p>
+                    <p className="p-home">Serviço de Signo:</p>
                     <Link to="/signo" > Signo </Link>
                
-                    <p>Serviço de Sorveteria:</p>
+                    <p className="p-home">Serviço de Sorveteria:</p>
                     <Link to="/sorveteria"> Sorveteria </Link>
                 </nav>
             </section>

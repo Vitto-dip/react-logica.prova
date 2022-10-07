@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './index.scss'
+import { Libra } from '../../services';
 
 
 
@@ -8,25 +9,14 @@ export default function Signo() {
     const [mes, setMes] = useState();
     const [resultado, setResultado] = useState();
 
-    function Libra() {
-        let msg = ''
-        if (dia >= 23 && dia < 32 && mes === 'setembro') {
-            msg = 'Você é de Libra!'
-        }
-        else if (dia > 0 && dia <= 22 && mes === 'outubro') {
-            msg = "Você é de Libra!"
-        }
-        else if (dia <= 0 || dia > 31) {
-            msg = 'Dia inválido!'
-        }
-        else {
-            msg = 'Você não é de Libra >:('
-        }
-        setResultado(msg);
+    function VerificarSigno(){
+        let x = Libra(dia, mes)
+        setResultado(x)
     }
 
     useEffect(() => {
-        Libra()
+        VerificarSigno()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dia, mes])
 
 

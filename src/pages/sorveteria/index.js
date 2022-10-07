@@ -1,48 +1,40 @@
 import "./index.scss"
 import { useEffect, useState } from "react"
-
+import { calcular } from "../../services";
 
 
 export default function Sorveteria() {
-    
+
     const [gramas, setGramas] = useState();
     const [total, setTotal] = useState();
 
-    function calcular(){
-        let total1 = 0;
-        let msg = "";
-
-        if(gramas > 1000){
-            total1 = (gramas / 100) * 3; 
-            msg = `O preço total a pagar é R$${total1}`
-        }
-
-        else if(gramas < 1000 && gramas > 0){
-            total1 = (gramas / 100) * 3.50;
-            msg = `O preço total a pagar é R$${total1}`
-        }
-        else if(gramas < 0){
-           msg = "Peso Inválido"
-        }
-
-        setTotal(msg)
+    function Calculo() {
+        let x = calcular(gramas)
+        setTotal(x)
     }
 
-    useEffect(() =>{
-        calcular()
+
+    useEffect(() => {
+        Calculo()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gramas])
 
-    return(
-        <main>
+    return (
+        <main className="sorveteria-principal">
 
-            <h2>Sorveteria</h2>
+            <header>
+                <h2>Sorveteria</h2>
+            </header>
+            
+            <section className="principal-section">
+                <div>
+                    <label>Gramas</label>
+                    <input type="number" onChange={e => setGramas(Number(e.target.value))} />
 
-            <div>
-                <label>Gramas</label>
-                <input type="number" onChange={e => setGramas(Number(e.target.value))}/>
-
-                <p>{total}</p>
-            </div>
+                    <p>{total}</p>
+                </div>
+            </section>
+            
         </main>
     )
 }
