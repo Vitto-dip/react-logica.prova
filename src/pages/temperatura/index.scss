@@ -1,0 +1,54 @@
+.temperatura-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(https://img.freepik.com/vetores-gratis/ilustracao-plana-de-homens-em-clima-quente-e-frio_74855-18438.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    height: 100vh;
+
+    .container-principal{
+        width: 45%;
+        height: 20em;
+        opacity: 0.85;
+        margin-top: 10em;
+
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 25px;
+
+        display: flex;
+        flex-direction: row;
+
+        img{
+            width: 15em;
+        }
+    
+        section{
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+    
+    
+            .align-input{
+                display: flex;
+                flex-direction: column;
+
+                input{
+                    width: 15em;
+                    min-height: 2.5em;
+
+                    border-radius: 25px;
+                    border: 1px solid black;
+                    outline: none;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+
+    
+}

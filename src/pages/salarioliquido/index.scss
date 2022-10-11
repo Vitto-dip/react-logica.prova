@@ -1,0 +1,49 @@
+.salario-principal {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://img.elo7.com.br/product/original/1CFADD3/painel-sublimado-tio-patinhas-2-5x1-5m-cenario-para-fotos.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .container-principal {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: #fff;
+        padding: 1em;
+        width: 45%;
+        height: 20em;
+        opacity: 0.85;
+
+        border-radius: 25px;
+
+
+        input {
+            width: 15em;
+            min-height: 2.5em;
+
+            border-radius: 25px;
+            border: 1px solid black;
+            outline: none;
+            padding-left: 15px;
+        }
+
+        img {
+            width: 13em;
+        }
+
+        h3{
+            margin: 0px;
+            text-align: center;
+            margin-top: 1em;
+        }
+    }
+
+    .container-align {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,51 @@
+.paradas-principal{
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 2em;
+        text-align: center;
+        
+    }
+    section{
+        display: flex;
+        align-items: center;
+        padding-top: 10em;
+        height: 100vh;
+
+        background-image: url(https://blogwlmscania.itaipumg.com.br/wp-content/uploads/2022/05/NTG_Scania_18.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        .container-principal{
+            display: flex;
+            flex-direction: column;
+            border-radius: 25px;
+            padding: 1em;
+
+            width: 40%;
+            height: 20em;
+            background-color: #fff;
+
+            box-shadow:  0px 0px 0px 5px rgba(45, 36, 49, 0.25);
+            
+            div{
+                margin-top: 1em;
+            }
+
+            input{
+                width: 15em;
+                min-height: 2.5em;
+
+                
+                
+                border-radius: 25px;
+                outline: none;
+                padding-left: 15px;
+            }
+            h3{
+                margin-top: 2em;
+            }
+        }
+    }
+}
