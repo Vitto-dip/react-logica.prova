@@ -136,4 +136,34 @@ function temperaturaCorporal(temperatura) {
     }
 }
 
-export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal }
+function CalcularIngresso(inteiras, meias, dia, tipo) {
+    try{
+        let valor = 0;
+
+        if(inteiras === 0 && meias === 0){
+            throw new Error('Digite a quantidade de ingressos!')
+        }
+        if(inteiras < 0 || meias < 0){
+            throw new Error('Digite uma quantidade válida!')
+        }
+        
+
+
+        if(dia === 'Quarta-feira' && tipo === false){
+            valor = (inteiras * 14.25) + (meias * 14.25)
+        }
+        else if(tipo === true){
+            valor = (inteiras * 5) + (meias * 5)
+        }
+        else{
+            valor = (inteiras * 28.50) + (meias * 28.50 / 2)
+        }
+        return valor;
+    }
+    catch(err){
+        return(err.message)
+    }
+
+}
+
+export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso }

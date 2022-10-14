@@ -1,0 +1,55 @@
+.ingresso-principal{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://www.whoa.in/download/minions-james-bond-style-hd-wallpaper);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .container-principal{
+        width: 30%;
+        height: fit-content;
+        padding: 1em;
+
+        border-radius: 25px;
+        background-color: rgb(39, 39, 39);
+        opacity: 0.8;
+
+        .input-check{
+            width: 1.5em;
+            height: 1.5em;
+            margin: 0px 10px 0px 0px;
+            
+        }
+        .input-normal{
+            width: 15em;
+            min-height: 2.5em;
+            border: 2px solid black;
+            border-radius: 25px;
+            outline: none;
+            padding-left: 15px;
+            
+        }
+        .align-check{
+            display: flex;
+            flex-direction: row;
+        }
+
+        select{
+            width: 16em;
+            height: 3em;
+
+            border-radius: 25px;
+            border: 2px solid black;
+            outline: none;
+            padding-left: 4.5em;
+            padding-top: 0.8em;
+        }
+        label, h2, p{
+            color: #fff;
+        }
+        
+        
+    }
+}

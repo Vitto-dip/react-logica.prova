@@ -7,6 +7,7 @@ import Home from "./pages/home/index.js";
 import SalarioLiquido from "./pages/salarioliquido/index.js"
 import Paradas from "./pages/paradas/index.js"
 import TemperaturaCorpo from "./pages/temperatura/index.js";
+import IngressoCinema from "./pages/cinema/index.js";
 
 export default function Rotas() {
     return(
@@ -19,6 +20,7 @@ export default function Rotas() {
                 <Route path='/salarioliquido' element={<SalarioLiquido />} />
                 <Route path='/paradas' element={<Paradas />} />
                 <Route path='/temperatura' element={<TemperaturaCorpo />} />
+                <Route path='/ingresso' element={<IngressoCinema />} />
 
             </Routes>
         </BrowserRouter>
