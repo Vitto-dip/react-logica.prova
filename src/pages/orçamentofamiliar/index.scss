@@ -1,0 +1,26 @@
+.pagOrcamento{
+    background-image: url(http://www.meupositivo.com.br/doseujeito/wp-content/uploads/2022/04/Como-consultar-se-tenho-dinheiro-esquecido-no-banco-passo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+        h1{
+            
+            justify-self: flex-start;
+        }
+    
+
+    .inputs{
+        
+        padding: 20px;
+        border: solid 1px;
+        background-color: white;
+        border-radius: 20px;
+        width: 30em;
+
+    }
+}

@@ -19,7 +19,7 @@ function calcular(gramas) {
         return msg;
     }
     catch (err) {
-        return(err.message)
+        return (err.message)
     }
 }
 
@@ -28,22 +28,22 @@ function calcular(gramas) {
 function Libra(dia, mes) {
     try {
         let msg = ''
-    if (dia >= 23 && dia < 32 && mes === 'setembro') {
-        msg = 'Você é de Libra!'
-    }
-    else if (dia > 0 && dia <= 22 && mes === 'outubro') {
-        msg = "Você é de Libra!"
-    }
-    else {
-        msg = 'Você não é de Libra >:('
-    }
+        if (dia >= 23 && dia < 32 && mes === 'setembro') {
+            msg = 'Você é de Libra!'
+        }
+        else if (dia > 0 && dia <= 22 && mes === 'outubro') {
+            msg = "Você é de Libra!"
+        }
+        else {
+            msg = 'Você não é de Libra >:('
+        }
 
-    if (dia <= 0 || dia > 31) {
-        throw new Error ('Dia inválido!')
-    }
-    return(msg);
+        if (dia <= 0 || dia > 31) {
+            throw new Error('Dia inválido!')
+        }
+        return (msg);
     } catch (err) {
-        return(err.message)
+        return (err.message)
     }
 }
 
@@ -55,7 +55,7 @@ function calculo(pequeno, medio, grande, desconto) {
         let valor = resultado - reducao;
 
         msg = `Total à pagar é R$${valor}`;
-        
+
         if (desconto < 0 || desconto > 100) {
             throw new Error("Valor de desconto inválido!")
         }
@@ -63,35 +63,35 @@ function calculo(pequeno, medio, grande, desconto) {
             throw new Error("Quantidade de produto inválido!")
         }
 
-        return(msg)
+        return (msg)
     }
-    catch (err){
-        return(err.message)
+    catch (err) {
+        return (err.message)
     }
-    
+
 }
 
 
 function calcularSalario(salario, bonus, desconto) {
     try {
-        
+
         let procentagemBonus = salario * bonus / 100;
         let total = salario + procentagemBonus - desconto;
 
         let msg = `Seu salário líquido é de R$${total}`;
 
-        if (salario < 0 || bonus < 0 || desconto < 0 ) {
-            throw new Error('Não foi possivel calcular o salário líquido!') 
+        if (salario < 0 || bonus < 0 || desconto < 0) {
+            throw new Error('Não foi possivel calcular o salário líquido!')
         }
 
         return msg;
     } catch (err) {
-        return(err.message)
+        return (err.message)
     }
 }
 
 function calcularParadas(capac, consumo, dist) {
-    try{
+    try {
         let litros = dist / consumo;
         let qtdParadas = litros / capac;
 
@@ -99,13 +99,13 @@ function calcularParadas(capac, consumo, dist) {
 
         let resposta = `Você precisará fazer ${qtdParadas} paradas até seu destino.`;
 
-        if(capac <= 0 || consumo <= 0 || dist <= 0){
+        if (capac <= 0 || consumo <= 0 || dist <= 0) {
             throw new Error('Valores incorretos ou inválidos!')
         }
         return resposta;
     }
-    catch(err) {
-        return(err.message)
+    catch (err) {
+        return (err.message)
     }
 }
 
@@ -116,7 +116,7 @@ function temperaturaCorporal(temperatura) {
         if (temperatura > 41) {
             msg = 'A situação para a sua temperatura é Hipertermia'
         }
-        else if(temperatura >= 39.6 && temperatura < 41){
+        else if (temperatura >= 39.6 && temperatura < 41) {
             msg = 'A situação para a sua temperatura é Febre Alta'
         }
         else if (temperatura >= 37.6 && temperatura < 39.6) {
@@ -128,7 +128,7 @@ function temperaturaCorporal(temperatura) {
         else if (temperatura < 36) {
             msg = 'A situação para a sua temperatura é Hipotermia'
         }
-        
+
         return msg;
 
     } catch (err) {
@@ -137,33 +137,62 @@ function temperaturaCorporal(temperatura) {
 }
 
 function CalcularIngresso(inteiras, meias, dia, tipo) {
-    try{
+    try {
         let valor = 0;
 
-        if(inteiras === 0 && meias === 0){
+        if (inteiras === 0 && meias === 0) {
             throw new Error('Digite a quantidade de ingressos!')
         }
-        if(inteiras < 0 || meias < 0){
+        if (inteiras < 0 || meias < 0) {
             throw new Error('Digite uma quantidade válida!')
         }
-        
 
 
-        if(dia === 'Quarta-feira' && tipo === false){
+
+        if (dia === 'Quarta-feira' && tipo === false) {
             valor = (inteiras * 14.25) + (meias * 14.25)
         }
-        else if(tipo === true){
+        else if (tipo === true) {
             valor = (inteiras * 5) + (meias * 5)
         }
-        else{
+        else {
             valor = (inteiras * 28.50) + (meias * 28.50 / 2)
         }
         return valor;
     }
-    catch(err){
-        return(err.message)
+    catch (err) {
+        return (err.message)
     }
 
 }
 
-export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso }
+function orcamento(ganhos, gastos) {
+    try {
+        let valor = (gastos / ganhos) * 100;
+        let msg = '';
+        if (gastos > ganhos) {
+            msg = 'Orçamento Comprometido! Hora de rever seus gastos!'
+        }
+        else if (valor >= 81 && valor <= 100) {
+            msg = 'Cuidado, seu orçamento pode ficar comprometido!'
+        }
+        else if (valor >= 51 && valor <= 80) {
+            msg = 'Atenção, melhor conter seus gastos!'
+        }
+        else if (valor >= 21 && valor <= 50) {
+            msg = 'Muito bem, seus gastos não ultrapassam metade dos ganhos!'
+        }
+        else if (valor >= 0 && valor <= 20) {
+            msg = 'Parabéns, você está gerenciando bem seu orçamento'
+        }
+        else {
+            msg = 'Insira algum valor!'
+        }
+        console.log(valor)
+        return msg;
+    } catch (err) {
+        return (err.message)
+    }
+}
+
+export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento }

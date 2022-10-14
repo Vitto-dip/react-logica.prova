@@ -8,6 +8,7 @@ import SalarioLiquido from "./pages/salarioliquido/index.js"
 import Paradas from "./pages/paradas/index.js"
 import TemperaturaCorpo from "./pages/temperatura/index.js";
 import IngressoCinema from "./pages/cinema/index.js";
+import OrcamentoFamiliar from "./pages/orçamentofamiliar/index.js";
 
 export default function Rotas() {
     return(
@@ -21,7 +22,7 @@ export default function Rotas() {
                 <Route path='/paradas' element={<Paradas />} />
                 <Route path='/temperatura' element={<TemperaturaCorpo />} />
                 <Route path='/ingresso' element={<IngressoCinema />} />
-
+                <Route path='/orcamento' element={<OrcamentoFamiliar/>} />
             </Routes>
         </BrowserRouter>
     )
