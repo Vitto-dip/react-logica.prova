@@ -199,12 +199,36 @@ function orcamento(ganhos, gastos) {
 function contar(inicio, fim) {
     let numbers = [];
     for (let i = inicio; i <= fim; i++) {
-        numbers[i] = i;
+        numbers.push(i);
     }
     return numbers;
 }
-let x = contar(3, 8)
+
+function linhaAsteristicos(tamanho){
+    let quantidade = []
+    for (let i = 1; i <= tamanho; i++){
+        quantidade.push(' *');
+    }
+    return quantidade;
+}
+
+function formasQuadradas(base, altura) {
+    let forma = []
+    for (let i = 1; i <= altura; i++) {
+        forma.push([])
+    }
+    for (let i = 1; i <= base; i++) {
+        for (let a = 0; a < altura; a++) {
+            forma[a].push(' *') 
+        }
+    }
+    return forma;
+    
+}
+
+let x = formasQuadradas(5, 2) 
 console.log(x)
 
 
-export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento, contar }
+
+export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento, contar, linhaAsteristicos, formasQuadradas }

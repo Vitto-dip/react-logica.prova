@@ -9,6 +9,9 @@ import Paradas from "./pages/paradas/index.js"
 import TemperaturaCorpo from "./pages/temperatura/index.js";
 import IngressoCinema from "./pages/cinema/index.js";
 import OrcamentoFamiliar from "./pages/orçamentofamiliar/index.js";
+import Contar from "./pages/contar/index.js"
+import Linha from "./pages/linhaAsteristicos/index.js";
+import FormasQuadráticas from "./pages/formas/index.js";
 
 export default function Rotas() {
     return(
@@ -23,6 +26,9 @@ export default function Rotas() {
                 <Route path='/temperatura' element={<TemperaturaCorpo />} />
                 <Route path='/ingresso' element={<IngressoCinema />} />
                 <Route path='/orcamento' element={<OrcamentoFamiliar/>} />
+                <Route path='/contar' element={<Contar/>} />
+                <Route path='/linha' element={<Linha/>} />
+                <Route path='/formas' element={<FormasQuadráticas/>} />
             </Routes>
         </BrowserRouter>
     )
