@@ -195,4 +195,16 @@ function orcamento(ganhos, gastos) {
     }
 }
 
-export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento }
+
+function contar(inicio, fim) {
+    let numbers = [];
+    for (let i = inicio; i <= fim; i++) {
+        numbers[i] = i;
+    }
+    return numbers;
+}
+let x = contar(3, 8)
+console.log(x)
+
+
+export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento, contar }
