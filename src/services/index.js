@@ -214,21 +214,36 @@ function linhaAsteristicos(tamanho){
 
 function formasQuadradas(base, altura) {
     let forma = []
+
     for (let i = 1; i <= altura; i++) {
-        forma.push([])
-    }
-    for (let i = 1; i <= base; i++) {
-        for (let a = 0; a < altura; a++) {
-            forma[a].push(' *') 
+        let formaNova = [];
+
+        for (let a = 0; a < base; a++) {
+            formaNova.push(' *') 
         }
+        forma.push(formaNova)
     }
+
     return forma;
     
 }
 
-let x = formasQuadradas(5, 2) 
+let x = formasQuadradas(5, 2);
 console.log(x)
 
+// função do capeta
+
+function jurosCompostos(capital, taxa, tempo) {
+    let montante = capital * Math.pow((1 + (taxa / 100)), tempo);
+    let juros = montante - capital;
+    let parcela = montante / (tempo * 12);
+
+    return [montante, juros, parcela];
+    
+}
+
+let A = jurosCompostos(80.000, 10, 10);
+console.log(A);
 
 
-export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento, contar, linhaAsteristicos, formasQuadradas }
+export { calcular, Libra, calculo, calcularSalario, calcularParadas, temperaturaCorporal, CalcularIngresso, orcamento, contar, linhaAsteristicos, formasQuadradas, jurosCompostos }

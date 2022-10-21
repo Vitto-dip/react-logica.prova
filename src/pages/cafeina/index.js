@@ -10,7 +10,7 @@ export default function Cafe() {
         let quantidadeCafelitros = (alunos * mililitros) / 1000;
 
         if(quantidadeCafelitros > litros) {
-            let x = quantidadeCafelitros * 
+            let x = quantidadeCafelitros;
         }
 
         console.log(quantidadeCafelitros)
@@ -30,6 +30,8 @@ export default function Cafe() {
         else {
             console.log(quantidadeCafelitros)
         }*/
+
+        
     return (
         <main>
 
